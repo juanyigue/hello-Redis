@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hello-redis2", "hello-redis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisAccess", "RedisAccess\RedisAccess.csproj", "{28AB6529-8106-4A3E-A278-CEB115013F0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSRedis", "CSRedis\CSRedis.csproj", "{D35E185E-A7E1-41E1-846C-21944F56074F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSRedis.Tests", "CSRedis.Tests\CSRedis.Tests.csproj", "{422A4579-8C59-4E92-8EB5-2A45C38D27FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{28AB6529-8106-4A3E-A278-CEB115013F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28AB6529-8106-4A3E-A278-CEB115013F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28AB6529-8106-4A3E-A278-CEB115013F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D35E185E-A7E1-41E1-846C-21944F56074F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D35E185E-A7E1-41E1-846C-21944F56074F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D35E185E-A7E1-41E1-846C-21944F56074F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D35E185E-A7E1-41E1-846C-21944F56074F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{422A4579-8C59-4E92-8EB5-2A45C38D27FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{422A4579-8C59-4E92-8EB5-2A45C38D27FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{422A4579-8C59-4E92-8EB5-2A45C38D27FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{422A4579-8C59-4E92-8EB5-2A45C38D27FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

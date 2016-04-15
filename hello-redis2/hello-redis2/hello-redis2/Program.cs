@@ -11,6 +11,12 @@ namespace hello_redis2
     {
         static void Main(string[] args)
         {
+            //test1();
+            test2();
+        }
+
+        private static void test1()
+        {
             RedisDB rdb = new RedisDB();
             string key = "t-1";
             string value = "test 1 value";
@@ -18,6 +24,15 @@ namespace hello_redis2
             rdb.SetValue(key, value);
 
             Console.WriteLine(string.Format("Value of {0}: {1}", key, value));
+        }
+
+        private static void test2()
+        {
+            Console.WriteLine("Write the host:port to connect to Redis: ");
+            string hostAndPort = Console.ReadLine();
+
+            RedisDB rdb = new RedisDB();
+            rdb.test2(hostAndPort);
         }
     }
 }
