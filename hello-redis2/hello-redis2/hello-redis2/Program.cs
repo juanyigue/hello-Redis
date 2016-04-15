@@ -33,8 +33,14 @@ namespace hello_redis2
             Console.WriteLine("Now write the port that Redis is listening to: ");
             string port = Console.ReadLine();
 
-            RedisDB rdb = new RedisDB();
-            rdb.test2(host, port);
+            RedisDB rdb = new RedisDB(host, port);
+
+            Console.WriteLine("Doing ping to Redis...");
+            Console.WriteLine(string.Format("Answer from Redis: {0}", rdb.Ping()));
+            Console.WriteLine(string.Format("Saying hello from Redis: {0}", rdb.SayHello()));
+            Console.WriteLine(string.Format("Redis, give me time: {0}", rdb.GiveTime().ToShortTimeString()));
+            Console.WriteLine("\nPress any key to finish...");
+            Console.ReadKey();
         }
     }
 }
