@@ -28,11 +28,13 @@ namespace hello_redis2
 
         private static void test2()
         {
-            Console.WriteLine("Write the host:port to connect to Redis: ");
-            string hostAndPort = Console.ReadLine();
+            Console.WriteLine("Write the host to connect to Redis: ");
+            string host = Console.ReadLine();
+            Console.WriteLine("Now write the port that Redis is listening to: ");
+            string port = Console.ReadLine();
 
             RedisDB rdb = new RedisDB();
-            rdb.test2(hostAndPort);
+            rdb.test2(host, port);
         }
     }
 }

@@ -16,16 +16,16 @@ namespace RedisAccess
 
         }
 
-        public void test2(string hostAndPort)
+        public void test2(string host, string port)
         {
-            RedisClient redis = new RedisClient(hostAndPort);
+            //RedisClient redis = new RedisClient(hostAndPort);
 
-            //using (var redis = new RedisClient(hostAndPort))
-            //{
-            //    string ping = redis.Ping();
-            //    string echo = redis.Echo("hello world from Redis");
-            //    DateTime time = redis.Time();
-            //}
+            using (var redis = new RedisClient(host, Convert.ToInt32(port)))
+            {
+                string ping = redis.Ping();
+                string echo = redis.Echo("hello world from Redis");
+                DateTime time = redis.Time();
+            }
         }
 
         public void SetValue(string key, string value)
