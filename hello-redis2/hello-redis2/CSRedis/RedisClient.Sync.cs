@@ -69,7 +69,8 @@ namespace CSRedis
         /// <returns>Status message</returns>
         public string Ping()
         {
-            return Write(RedisCommands.Ping());
+            return "llaasdf";
+            //return Write(RedisCommands.Ping());
         }
 
         /// <summary>

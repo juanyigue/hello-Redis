@@ -58,12 +58,15 @@ namespace CSRedis.Internal
 
         public bool Connect()
         {
-            _redisSocket.Connect(_endPoint);
 
-            if (_redisSocket.Connected)
-                OnConnected();
+            return false;
 
-            return _redisSocket.Connected;
+            //_redisSocket.Connect(_endPoint);
+
+            //if (_redisSocket.Connected)
+            //    OnConnected();
+
+            //return _redisSocket.Connected;
         }
 
         public Task<bool> ConnectAsync()
