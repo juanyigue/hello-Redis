@@ -44,12 +44,12 @@ namespace RedisAccess
 
         public void SetValue(string key, string value)
         {
-
+            redisCli.Set(key, value);
         }
 
         public string GetValue(string key)
         {
-            return "lala";
+            return redisCli.Get(key);
         }
 
     }

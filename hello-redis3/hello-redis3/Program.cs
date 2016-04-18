@@ -12,7 +12,8 @@ namespace hello_redis3
         static void Main(string[] args)
         {
             //test1();
-            test2();
+            //test2();
+            test3();
         }
 
         private static void test1()
@@ -52,5 +53,36 @@ namespace hello_redis3
                 Console.ReadKey();
             }
         }
+
+        private static void test3()
+        {
+            try
+            {
+                Console.WriteLine("Write the host to connect to Redis: ");
+                string host = Console.ReadLine();
+                Console.WriteLine("Now write the port that Redis is listening to: ");
+                string port = Console.ReadLine();
+
+                RedisDB rdb = new RedisDB(host, port);
+
+                Console.WriteLine(string.Format("Ping: {0}", rdb.Ping()));
+                string key = "key1";
+                Console.WriteLine(string.Format("Please, set a value for '{0}':", key));
+                string value = Console.ReadLine();
+                rdb.SetValue(key, value);
+                Console.WriteLine(string.Format("Here is the value of '{0}': {1}", key, rdb.GetValue(key)));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(string.Format("An error has ocurred: {0}", ex));
+            }
+            finally
+            {
+                Console.WriteLine("\nPress any key to finish...");
+                Console.ReadKey();
+            }
+        }
+
+
     }
 }
